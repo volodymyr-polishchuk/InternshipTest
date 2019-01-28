@@ -1,18 +1,20 @@
 package institution.interlink;
 
+import entities.AbstractInstitutionEntity;
+import institution.University;
 import person.Student;
 
-public class Internship {
+public class Internship extends AbstractInstitutionEntity {
+
     public Internship(String name) {
-        //TODO: Implementation is needed
+        super(name);
     }
 
-    public void setStudent(Student student) {
-        //TODO: Implementation is needed
-    }
-
-    public String getStudents() {
-        //TODO: Implementation is needed
-        return "Andrew Maslenko\nJulia Veselkina\n";
+    public boolean addStudent(Student student, University university) {
+        if (student.getKnowledge().getLevel() > university.getAverageStudentKnowledge()) {
+            addStudent(student);
+            return true;
+        }
+        return false;
     }
 }
