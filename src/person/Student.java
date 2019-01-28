@@ -1,13 +1,31 @@
 package person;
 
+import entities.AbstractNamedEntity;
 import person.consciousness.Knowledge;
 
-public class Student {
+public class Student extends AbstractNamedEntity {
+    private Knowledge knowledge;
+
     public Student(String name) {
-        //TODO: Implementation is needed
+        super(name);
     }
 
     public void setKnowledge(Knowledge knowledge) {
-        //TODO: Implementation is needed
+        this.knowledge = knowledge;
+    }
+
+    public Knowledge getKnowledge() {
+        return knowledge;
+    }
+
+    public static Student createStudent(String name, Knowledge knowledge) {
+        Student student = new Student(name);
+        student.setKnowledge(knowledge);
+        return student;
+    }
+
+    @Override
+    public String toString() {
+        return getName();
     }
 }
