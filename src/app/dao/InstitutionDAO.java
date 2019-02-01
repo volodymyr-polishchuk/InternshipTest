@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface InstitutionDAO {
 
-    AbstractInstitutionEntity getByName(String name);
+    <T extends AbstractInstitutionEntity> T getByName(String name, Class<T> destination);
 
     List<AbstractInstitutionEntity> getAll();
 

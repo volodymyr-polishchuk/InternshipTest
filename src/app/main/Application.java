@@ -17,10 +17,10 @@ public class Application {
     public static void main(String[] args) {
         List<Student> students = studentDAO.getStudents();
 
-        University university = (University) institutionDAO.getByName("CH.U.I.");
+        University university = institutionDAO.getByName("CH.U.I.", University.class);
         students.forEach(university::addStudent);
 
-        Internship internship = (Internship) institutionDAO.getByName("Interlink");
+        Internship internship = institutionDAO.getByName("Interlink", Internship.class);
         university.getStudents().forEach(student -> internship.addStudent(student, university));
 
         System.out.println("List of internship's students:");

@@ -15,7 +15,7 @@ public class MemoryInstitutionDAOTest {
     public void get_university_from_DAO() {
         InstitutionDAO institutionDAO = new MemoryInstitutionDAO();
 
-        University university = (University) institutionDAO.getByName("CH.U.I.");
+        University university = institutionDAO.getByName("CH.U.I.", University.class);
 
         assertThat(university.getName(), is("CH.U.I."));
     }
@@ -24,7 +24,7 @@ public class MemoryInstitutionDAOTest {
     public void get_internship_from_DAO() {
         InstitutionDAO institutionDAO = new MemoryInstitutionDAO();
 
-        Internship internship = (Internship) institutionDAO.getByName("Interlink");
+        Internship internship = institutionDAO.getByName("Interlink", Internship.class);
 
         assertThat(internship.getName(), is("Interlink"));
     }

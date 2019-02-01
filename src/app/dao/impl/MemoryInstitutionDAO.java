@@ -18,11 +18,11 @@ public class MemoryInstitutionDAO implements InstitutionDAO {
     }
 
     @Override
-    public AbstractInstitutionEntity getByName(String name) {
-        return institutions.stream()
+    public <T extends AbstractInstitutionEntity> T getByName(String name, Class<T> destination) {
+        return destination.cast(institutions.stream()
                 .filter((institution) ->  institution.getName().equals(name))
                 .findFirst()
-                .orElse(null);
+                .orElse(null));
     }
 
     @Override
