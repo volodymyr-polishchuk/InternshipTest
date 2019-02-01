@@ -1,12 +1,13 @@
-package dao;
+package app.dao.impl;
 
-import person.Student;
-import person.consciousness.Knowledge;
+import app.dao.StudentDAO;
+import app.person.Student;
+import app.person.consciousness.Knowledge;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class HardCodeStudentDAO implements StudentDAO {
+public class MemoryStudentDAO implements StudentDAO {
     private static final List<Student> STUDENTS;
     private int cursor = 0;
 

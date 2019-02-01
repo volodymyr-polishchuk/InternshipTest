@@ -1,4 +1,4 @@
-package entities;
+package app.entities;
 
 public abstract class AbstractNamedEntity implements NamedEntity {
     private String name;

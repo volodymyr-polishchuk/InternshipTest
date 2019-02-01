@@ -1,6 +1,6 @@
-package dao;
+package app.dao;
 
-import person.Student;
+import app.person.Student;
 
 import java.util.Iterator;
 import java.util.List;

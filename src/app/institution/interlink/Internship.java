@@ -1,8 +1,8 @@
-package institution.interlink;
+package app.institution.interlink;
 
-import entities.AbstractInstitutionEntity;
-import institution.University;
-import person.Student;
+import app.entities.AbstractInstitutionEntity;
+import app.institution.University;
+import app.person.Student;
 
 public class Internship extends AbstractInstitutionEntity {
 

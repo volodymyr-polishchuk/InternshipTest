@@ -1,7 +1,7 @@
-package institution;
+package app.institution;
 
-import entities.AbstractInstitutionEntity;
-import person.Student;
+import app.entities.AbstractInstitutionEntity;
+import app.person.Student;
 
 public class University extends AbstractInstitutionEntity {
     private double averageBuffer = 0;

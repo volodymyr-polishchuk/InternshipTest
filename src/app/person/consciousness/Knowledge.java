@@ -1,4 +1,4 @@
-package person.consciousness;
+package app.person.consciousness;
 
 public class Knowledge {
     private final int level;

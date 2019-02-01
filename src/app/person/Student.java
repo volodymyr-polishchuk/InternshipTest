@@ -1,7 +1,7 @@
-package person;
+package app.person;
 
-import entities.AbstractNamedEntity;
-import person.consciousness.Knowledge;
+import app.entities.AbstractNamedEntity;
+import app.person.consciousness.Knowledge;
 
 public class Student extends AbstractNamedEntity {
     private Knowledge knowledge;

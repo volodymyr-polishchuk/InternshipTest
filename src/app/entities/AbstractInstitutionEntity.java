@@ -1,6 +1,6 @@
-package entities;
+package app.entities;
 
-import person.Student;
+import app.person.Student;
 
 import java.util.ArrayList;
 import java.util.List;
